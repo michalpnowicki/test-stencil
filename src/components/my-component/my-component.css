@@ -1,0 +1,10 @@
+:host {
+  display: block;
+}
+
+.button {
+  color: red;
+  background-color: #00ff00;
+  border: 0;
+  margin: 10px;
+}
