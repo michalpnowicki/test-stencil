@@ -2,8 +2,8 @@ import { Component, Prop, h,Method,State } from '@stencil/core';
 import { format } from '../../utils/utils';
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.css',
+  tag: 'first-comp',
+  styleUrl: 'first-comp.css',
   shadow: true,
 })
 export class MyComponent {
