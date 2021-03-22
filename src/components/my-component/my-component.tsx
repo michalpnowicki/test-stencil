@@ -1,4 +1,4 @@
-import { Component, Prop, h,Method,State, Fragment } from '@stencil/core';
+import { Component, Prop, h,Method,State } from '@stencil/core';
 import { format } from '../../utils/utils';
 
 @Component({
@@ -49,7 +49,7 @@ export class MyComponent {
     return <div>
       <div>Hello, World! I'm {this.getText()}</div>
       {this.data && (
-        <Fragment>
+        <div>
           <button class="button" onClick={() => this.handleClick("witam")}>
             Set "witam"
           </button>
@@ -59,7 +59,7 @@ export class MyComponent {
           <button class="button" onClick={() => this.handleGetStateClick()}>
             Get state
           </button>
-        </Fragment>
+        </div>
       )}
     </div>
     
