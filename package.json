@@ -2,17 +2,16 @@
   "name": "framstencil",
   "version": "0.0.5",
   "description": "Fram Component Starter",
-  "main": "dist/index.js",
-  "module": "dist/custom-elements/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
   "es2015": "dist/esm/index.js",
   "es2017": "dist/esm/index.js",
-  "types": "dist/custom-elements/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/framstencil/framstencil.esm.js",
   "files": [
-    "dist/",
-    "loader/"
+    "dist/"
   ],
   "author": "NPM Demo User <test@test.com> (http://example.com)",
   "scripts": {
