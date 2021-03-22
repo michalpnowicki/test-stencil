@@ -8,6 +8,14 @@ module.exports = {
     // You can change the configuration based on that.
     // 'PRODUCTION' is used when building the static version of storybook.
 
+    config.devServer = {
+      watchContentBase: true,
+      contentBase: path.join(__dirname, 'src'),
+      historyApiFallback: true,
+    };
+
+    config.module.rules[0].use[0].options.sourceType = 'unambiguous';
+
     config.module.rules.push({
       test: /.\.stories\.js$/,
       exclude: /(src)/,
