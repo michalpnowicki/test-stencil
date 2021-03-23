@@ -1,6 +1,5 @@
 import { Config } from '@stencil/core';
 import { reactOutputTarget } from '@stencil/react-output-target';
-import { angularOutputTarget, ValueAccessorConfig } from '@stencil/angular-output-target';
 
 export const config: Config = {
   namespace: 'framstencil',
@@ -19,9 +18,5 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null, // disable service workers
     },
-    reactOutputTarget({
-      componentCorePackage: 'component-library',
-      proxiesFile: '../component-library-react/src/components.ts',
-    }),
   ],
 };
