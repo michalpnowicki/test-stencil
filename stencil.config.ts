@@ -1,15 +1,16 @@
 import { Config } from '@stencil/core';
+import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
   namespace: 'framstencil',
   outputTargets: [
     {
       type: 'dist',
-      // esmLoaderPath: '../loader',
+      esmLoaderPath: '../loader',
     },
-    // {
-    //   type: 'dist-custom-elements-bundle',
-    // },
+    {
+      type: 'dist-custom-elements-bundle',
+    },
     {
       type: 'docs-readme',
     },
@@ -17,5 +18,9 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null, // disable service workers
     },
+    reactOutputTarget({
+      componentCorePackage: 'component-library',
+      proxiesFile: '../component-library-react/src/components.ts',
+    }),
   ],
 };
