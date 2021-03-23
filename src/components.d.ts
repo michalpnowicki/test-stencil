@@ -25,6 +25,10 @@ export namespace Components {
           * The middle name
          */
         "middle": string;
+        /**
+          * The last name
+         */
+        "myFunc": () => void;
     }
 }
 declare global {
@@ -56,6 +60,11 @@ declare namespace LocalJSX {
           * The middle name
          */
         "middle"?: string;
+        /**
+          * The last name
+         */
+        "myFunc"?: () => void;
+        "onButtonClicked"?: (event: CustomEvent<string>) => void;
     }
     interface IntrinsicElements {
         "first-comp": FirstComp;

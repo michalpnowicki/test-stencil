@@ -9,6 +9,10 @@
     <script nomodule src="/build/framstencil.js"></script>
   </head>
   <body>
-    <first-comp first="Michal" last="YO" data='{tab1: { label: "witam", content: "serdecznie"}}'></first-comp>
+    <first-comp first="Michal" last="YO" data='test'></first-comp>
+    <script>
+      const firstCompeElement = document.querySelector('first-comp');
+      firstCompeElement.addEventListener('buttonClicked', event => { console.log(event); alert("handling zewnętrzy: " + event.detail) })
+    </script>
   </body>
 </html>

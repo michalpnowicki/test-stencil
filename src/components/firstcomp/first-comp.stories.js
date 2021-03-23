@@ -8,4 +8,4 @@ export default {
   },
 };
 
-export const Default = () => `<first-comp first="witam" middle="serdecznie" last="elo" data='{tab1: { label: "witam", content: "serdecznie"}}'/>`;
+export const Default = () => `<first-comp first="Witam" middle="Was" last="Serdecznie" data='test'/>`;

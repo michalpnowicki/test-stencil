@@ -2,3 +2,7 @@
 
 <script type="module" src="./framstencil/framstencil.esm.js"></script> 
 <script type="nomodule" src="./framstencil/framstencil.js"></script> 
+<script>
+    const firstCompeElement = document.querySelector('first-comp');
+    firstCompeElement.addEventListener('buttonClicked', event => { console.log(event); alert("handling zewnętrzy: " + event.detail) })
+  </script>

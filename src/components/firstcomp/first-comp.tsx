@@ -1,4 +1,4 @@
-import { Component, Prop, h,Method,State } from '@stencil/core';
+import { Component, Prop, h,Method,State, Event, EventEmitter } from '@stencil/core';
 import { format } from '../../utils/utils';
 
 @Component({
@@ -29,6 +29,11 @@ export class MyComponent {
    */
   @Prop() data: string | {[key: string]: {label:string,content:string}};
 
+ /**
+   * The last name
+   */
+  @Prop() myFunc: () => void;
+
   @Method()
   async handleClick(id) {
     this.active = id;
@@ -44,6 +49,12 @@ export class MyComponent {
     return format(this.first, this.middle, this.last);
   }
 
+  @Event() buttonClicked: EventEmitter<string>;
+
+
+  handleButtonClicked(clickedData: string) {
+    this.buttonClicked.emit(clickedData);
+  }
 
   render() {
     return <div>
@@ -58,6 +69,9 @@ export class MyComponent {
           </button>
           <button class="button" onClick={() => this.handleGetStateClick()}>
             Get state
+          </button>
+          <button class="button" onClick={() => this.handleButtonClicked("To jest moja funkcja i przycisk został kliknięty")}>
+            MyFunc
           </button>
         </div>
       )}
