@@ -1,5 +1,6 @@
 import { Config } from '@stencil/core';
 import { reactOutputTarget } from '@stencil/react-output-target';
+import { angularOutputTarget, ValueAccessorConfig } from '@stencil/angular-output-target';
 
 export const config: Config = {
   namespace: 'framstencil',
